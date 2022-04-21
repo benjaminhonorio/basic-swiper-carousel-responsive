@@ -1,9 +1,15 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import './App.css'
 import logo from './logo.svg'
 
-function App() {
+export const useCounter = () => {
   const [count, setCount] = useState(0)
+  const increment = useCallback(() => setCount(x => x + 1), [])
+  return { count, increment }
+}
+
+function App() {
+  const { count, increment } = useCounter()
 
   return (
     <div className='App'>
@@ -11,7 +17,7 @@ function App() {
         <img src={logo} className='App-logo' alt='logo' />
         <p>Hello Vite + React!</p>
         <p>
-          <button type='button' onClick={() => setCount(count => count + 1)}>
+          <button type='button' onClick={increment}>
             count is: {count}
           </button>
         </p>

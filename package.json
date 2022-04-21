@@ -7,13 +7,20 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "coverage": "vitest run --coverage",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "8.13.0",
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.1.1",
+    "@testing-library/user-event": "14.1.1",
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
     "@typescript-eslint/eslint-plugin": "5.20.0",
@@ -27,9 +34,11 @@
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.4.0",
+    "jsdom": "19.0.0",
     "prettier": "2.6.2",
     "typescript": "4.6.3",
     "vite": "2.9.5",
-    "vite-plugin-checker": "0.4.6"
+    "vite-plugin-checker": "0.4.6",
+    "vitest": "0.9.3"
   }
 }
