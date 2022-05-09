@@ -12,13 +12,17 @@ I marked some comments with numbers in the code, so you can better understand wh
 (0) As you can see, we can wrap the carousel, aka "Swiper", in MUI (Material UI) components and have good control over it.
 (1) I can have total control of the slides styles with the class "swiper-slide" through a parent container thanks to sx prop and a simple selector
 (2) you can do brakpoints as usual with MUI and the swiper also has breakpoints that you can match 
-(3) You can add more functionality, like effects, aria things, the dots, etc, using what they call "modules" that you can import from "swiper". Navigation module allow us to use buttons for the navigation 
+(3) You can add more functionality, like effects, aria things, the dots, etc, using what they call "modules" that you can import from "swiper". 
+Navigation module allow us to use buttons for the navigation 
 (4) You can control the space between cards if you have many on sight, its pretty much like spacing in MUI, but with numbers, which are pixels.
 (5) You can control how many slides you show with slidesPerView prop 
 (6) You can have MUI elements inside the swiper slides 
-(7) You can create the buttons as single components, and using the useSwiper hook we can give the buttons the functionality, as long as they live inside the Swiper container 
+(7) You can create the buttons as single components, and using the useSwiper hook we can give the buttons the functionality, as long as they live 
+inside the Swiper container 
 (8) but the buttons inside  Swiper live as separate entities and they are not positioned by force, so they can be wrapped with mui components and we can be happy 
-(9) this one is needed to prevent clicks in links or clickable elements in the slide from triggering a movement to the next slide, I got  frustrated for a while with that behavior, but this prop fix it! you knoow, we could want to enable clicking the whole card or the title at some point to move the user to the detail page or something
+(9) this one is needed to prevent clicks in links or clickable elements in the slide from triggering a movement to the next slide, 
+I got  frustrated for a while with that behavior, but this prop fix it! you knoow, we could want to enable 
+clicking the whole card or the title at some point to move the user to the detail page or something
 solution found here: https://github.com/nolimits4web/Swiper/issues/3149#issuecomment-1044631964
 (10) shows a hand grabber cursor, don't know but we could enable this one too, it depends on the ux people i guess
 */
